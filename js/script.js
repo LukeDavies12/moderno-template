@@ -1,5 +1,5 @@
 // add nav-scrolled class to navbar
-window.onscroll = function navScrolled() {
+window.onscroll = () => {
     const navbar = document.querySelector('.navbar')
 
     if (window.scrollY > 10) {
