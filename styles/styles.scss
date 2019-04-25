@@ -1,0 +1,575 @@
+$primary: #4834d4;
+$light-grey: #c8d6e5;
+$body-txt: #222f3e;
+$headers: black;
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $body-txt;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2 {
+    color: $headers;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    transition: color ease .2s;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 95%;
+    }
+}
+
+// navbar
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: white;
+    transition: box-shadow ease .2s;
+    padding: 20px 0;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav-left {
+            .logo {
+                color: $primary;
+                font-weight: bold;
+                font-size: 24px;
+            }
+        }
+
+        .nav-right {
+            a {
+                color: $body-txt;
+                margin-left: 30px;
+
+                &:hover {
+                    color: lighten($body-txt, $amount: 15)
+                }
+
+                &:active {
+                    color: lighten($body-txt, $amount: 30)
+                }
+            }
+            .menu-display {
+                display: none;
+                font-size: 40px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//responsive navbar
+.responsive-links {
+    // display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background: white;  
+    display: none;
+    z-index: 99;
+
+    .menu-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 20px;
+        margin-right: 20px;
+        
+        .menu-close-btn {
+
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 40px;
+        }
+    }
+
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+
+        a {
+            margin: 50px 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: $body-txt;
+        }
+    }
+}
+
+//scrolled class
+.navbar-scrolled {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+}
+
+@media only screen and (max-width: 720px) {
+    .navbar {
+        nav {
+            .nav-right {
+                a {
+                    display: none;
+                }
+
+                .menu-display {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .navbar {
+        nav {
+            .nav-right {
+                .menu-display {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
+//apllied to all sections (process, team, contact)
+.section {
+    padding: 50px 0;
+}
+
+//showcase
+.showcase {
+    .showcase-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .showcase-left {
+            margin-top: 30vh;
+
+            .showcase-p {
+                line-height: 1.5em;
+            }
+
+            .showcase-btn {
+                font-size: 16px;
+                border: 3px solid $primary;
+                color: $primary;
+                background: transparent;
+                padding: 10px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    background: $primary;
+                    color: white;
+                }
+
+                &:active {
+                    background: lighten($primary, $amount: 15);
+                    color: white;
+                    border: 3px solid lighten($primary, $amount: 15);
+                }
+            }
+        }
+
+        .showcase-right {
+            margin-top: 30vh;
+
+            .showcase-img {
+                float: right;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .showcase {
+        .showcase-container {
+
+            .showcase-right {
+                margin-top: 30vh;
+
+                .showcase-img {
+                    margin-top: -100px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .showcase {
+        .showcase-container {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .showcase-right {
+                margin-top: none;
+
+                .showcase-img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//process section
+.process {
+    .process-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+
+        .process-card {
+            padding: 10px 10px;
+            border: 1px solid $light-grey;
+            border-radius: 10px;
+            position: relative;
+            transition: box-shadow ease .2s;
+
+            .process-card-img {
+                width: 100%;
+                height: 300px;
+            }
+
+            &:hover {
+                box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+            }
+
+            .lighten {
+                color: darken($light-grey, $amount: 50);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .process {
+        .process-content {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+//team section
+.team {
+    .team-content {
+        border: 1px solid $light-grey;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .team-card {
+            text-align: center;
+            padding: 20px 0;
+
+            .team-card-img {
+                width: 100px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .team-card-btn {
+                color: red;
+                font-size: 15px;
+                border: 3px solid $primary;
+                color: $primary;
+                background: transparent;
+                padding: 10px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    background: $primary;
+                    color: white;
+                }
+
+                &:active {
+                    background: lighten($primary, $amount: 15);
+                    color: white;
+                    border: 3px solid lighten($primary, $amount: 15);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .team {
+        .team-content {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .team {
+        .team-content {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+
+    .modal-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        .modal-close-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 20px;
+            font-size: 40px;
+        }
+    }
+
+    .modal-content {
+        background: white;
+        margin: 10% auto;
+        width: 60%;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+        border-radius: 10px;
+        padding: 20px 20px;
+
+        .modal-content-title {
+            color: $primary;
+        }
+
+        .modal-content-img {
+            margin: 0 auto;
+            width: 200px;
+        }
+
+        .modal-content-a {
+            color: $body-txt;
+
+            &:hover {
+                color: lighten($body-txt, $amount: 15)
+            }
+
+            &:active {
+                color: lighten($body-txt, $amount: 30)
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .modal {
+        .modal-content {
+            margin: 30% auto;
+        }
+    }
+}
+
+//contact section
+.contact {
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .contact-img {
+            width: 75%;
+            margin-top: 15%;
+        }
+
+        form {
+            padding: 10px 10px;
+            border: 1px solid $light-grey;
+            border-radius: 10px;
+
+            input {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 10px 5px;
+                margin: 5px 0;
+                border: 2px solid $light-grey;
+                color: $body-txt;
+                font-size: 15px;
+                background: darken($color: white, $amount: 5);
+                transition: all ease .2s;
+                border-radius: 10px;
+                font-family: 'Montserrat', sans-serif;
+
+                &::placeholder {
+                    color: $body-txt;
+                }
+
+                &:hover {
+                    background: darken($color: white, $amount: 10);
+                }
+
+                &:focus {
+                    background: darken($color: white, $amount: 15);
+                    border: 2px solid $primary;
+                    outline: none;
+                }
+            }
+
+            textarea {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 10px 5px;
+                margin: 5px 0;
+                border: 2px solid $light-grey;
+                color: $body-txt;
+                font-size: 15px;
+                background: darken($color: white, $amount: 5);
+                border-radius: 10px;
+                font-family: 'Montserrat', sans-serif;
+
+                &::placeholder {
+                    color: $body-txt;
+                }
+
+                &:hover {
+                    background: darken($color: white, $amount: 10);
+                }
+
+                &:focus {
+                    background: darken($color: white, $amount: 15);
+                    border: 2px solid $primary;
+                    outline: none;
+                }
+            }
+
+            button {
+                width: 100%;
+                font-size: 16px;
+                border: 3px solid $primary;
+                color: $primary;
+                background: transparent;
+                padding: 10px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+                border-radius: 10px;
+
+                &:hover {
+                    background: $primary;
+                    color: white;
+                }
+
+                &:active {
+                    background: lighten($primary, $amount: 15);
+                    color: white;
+                    border: 3px solid lighten($primary, $amount: 15);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .contact {
+        .contact-content {
+            grid-template-columns: 1fr;
+
+            .contact-left {
+                margin-bottom: 75px;
+
+                .contact-img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+//footer
+.footer {
+    background: $body-txt;
+    color: white;
+    padding: 50px 0;
+    line-height: 2em;
+
+    a {
+        color: $light-grey;
+        padding: 5px 5px;
+        background: black;
+
+        &:hover {
+            color: lighten($light-grey, $amount: 15)
+        }
+
+        &:active {
+            color: $light-grey;
+        }
+    }
+}
