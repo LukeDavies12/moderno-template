@@ -52,7 +52,7 @@ const member = function () {
 // data
 member.data = {
     name: 'name',
-    imageSrc: '/img/',
+    imageSrc: 'img/',
     description: 'description',
     link: 'https://github.com/LukeDavies12'
 }
@@ -87,7 +87,7 @@ window.addEventListener('click', (e) => {
 memberBtnOne.addEventListener('click', () => {
     member.data = {
         name: 'Jane Doe',
-        imageSrc: '/img/team-member-demo.svg',
+        imageSrc: 'img/team-member-demo.svg',
         description: 'description 1',
         link: 'https://github.com/LukeDavies12'
     }
@@ -98,7 +98,7 @@ memberBtnOne.addEventListener('click', () => {
 memberBtnTwo.addEventListener('click', () => {
     member.data = {
         name: 'John Doe',
-        imageSrc: '/img/team-member-demo-two.svg',
+        imageSrc: 'img/team-member-demo-two.svg',
         description: 'description 2',
         link: 'https://github.com/LukeDavies12'
     }
@@ -109,7 +109,7 @@ memberBtnTwo.addEventListener('click', () => {
 memberBtnThree.addEventListener('click', () => {
     member.data = {
         name: 'Jane Doe the Second',
-        imageSrc: '/img/team-member-demo.svg',
+        imageSrc: 'img/team-member-demo.svg',
         description: 'description 3',
         link: 'https://github.com/LukeDavies12'
     }
@@ -120,7 +120,7 @@ memberBtnThree.addEventListener('click', () => {
 memberBtnFour.addEventListener('click', () => {
     member.data = {
         name: 'John Doe the Second',
-        imageSrc: '/img/team-member-demo-two.svg',
+        imageSrc: 'img/team-member-demo-two.svg',
         description: 'description 4',
         link: 'https://github.com/LukeDavies12'
     }
