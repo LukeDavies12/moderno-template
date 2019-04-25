@@ -43,7 +43,7 @@ menuCloseBtn.addEventListener('click', () => {
 
 
 // template
-const member = function () {
+const member =  () => {
     return '<h3 class="modal-content-title">' + member.data.name
         + '</h3>' + '<img src="' + member.data.imageSrc + '" class="modal-content-img">'
         + '<p>' + member.data.description + '</p>'
