@@ -9,13 +9,14 @@ window.onscroll = function navScrolled() {
     }
 }
 
-//respnsive navbar
+//responsive navbar
 //add style display block on click of menu toggle
 const menuDisplayBtn = document.querySelector('.menu-display')
 
 menuDisplayBtn.addEventListener('click', () => {
     responsiveMenu.style.display = 'block'  
 })
+
 // close on click of link
 const responsiveMenu = document.querySelector('.responsive-links')
 const respnosiveOne = document.querySelector('.responsive-one')
