@@ -4,5 +4,4 @@ This template was made using css grid, vanilla javascript, icons from ionicons, 
 
 [View the site](https://lukedavies12.github.io/moderno-template/)
 
-TODO - add animations
 
