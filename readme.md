@@ -1,3 +1,6 @@
  # Moderno Template is a template for a single page site using custom html, css, and javascript. 
  
- TODO - add animations
+This template was made using css grid, vanilla javascript, icons from ionicons, and images from unDraw.
+
+TODO - add animations
+
